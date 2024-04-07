@@ -1,0 +1,47 @@
+{% load crispy_forms_tags %}
+{% load socialaccount %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicApp | Sign In</title>
+    <style>
+        .or-seperator {
+            margin: 20px 0 10px;
+            text-align: center;
+            border-top: 1px solid #ccc;
+        }
+
+        .or-seperator i {
+            padding: 0 10px;
+            background: #f7f7f7;
+            position: relative;
+            top: -11px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <main role="main" class="container col-12 col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4">
+        <br>
+        <h1 class="text-center">Sign In</h1>
+        <br>
+        <a href="#" class="btn btn-outline-dark btn-block">
+            <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+            Sign in with Google
+        </a>
+        <div class="or-seperator"><i>or</i></div>
+        <form method="post">
+            <input type="hidden" name="csrfmiddlewaretoken" value="your_csrf_token_here">
+            <!-- Add your form fields here -->
+            <button class="btn btn-success btn-block" type="submit">Log In</button>
+            <p></p>
+        </form>
+        <br>
+        <p>Don't have an account? Please <a href="#">sign up</a> first.</p>
+    </main>
+</body>
+</html>
